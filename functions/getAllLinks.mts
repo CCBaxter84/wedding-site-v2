@@ -18,7 +18,7 @@
 //   return new Response(res.data.data)
 // }
 
-import { Handler } from '@netlify/functions'
+import type { Handler } from '@netlify/functions'
 import axios from 'axios'
 
 const handler: Handler = async (event, context) => {
