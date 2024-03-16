@@ -37,7 +37,7 @@ const handler: Handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ data: res.data.data })
+    body: JSON.stringify(res.data.data)
   }
 }
 
