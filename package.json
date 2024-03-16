@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@netlify/functions": "^2.6.0",
+    "axios": "^1.6.8",
+    "dotenv": "^16.4.5",
     "vue": "^3.4.21"
   },
   "devDependencies": {
