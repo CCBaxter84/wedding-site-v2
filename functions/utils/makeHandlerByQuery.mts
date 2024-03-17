@@ -1,7 +1,7 @@
 import getContentByQuery from './getContentByQuery.mts'
 import formatResponse from './formatResponse.mts'
 
-export const getLinksHandler = (query) => async () => {
+export const makeHandlerByQuery = (query) => async () => {
   try {
     const data = await getContentByQuery(query)
     console.log(data.length)
