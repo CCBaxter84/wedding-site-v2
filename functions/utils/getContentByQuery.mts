@@ -10,9 +10,7 @@ export default async (query) => {
       Authorization: `Bearer ${process.env.FAUNA_SECRET_KEY}`,
       'Content-Type': 'application/json'
     },
-    data: {
-      query
-    }
+    data: { query }
   })
   if (errors) {
     console.error(errors);

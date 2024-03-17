@@ -4,7 +4,6 @@ import formatResponse from './formatResponse.mts'
 export const makeHandlerByQuery = (query) => async () => {
   try {
     const data = await getContentByQuery(query)
-    console.log(data.length)
     return formatResponse(200, data)
   } catch(error) {
     console.error(error)
