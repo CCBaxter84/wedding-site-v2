@@ -1,6 +1,5 @@
-import sendQuery from './sendQuery.mts'
+import sendQuery from './getContentByQuery.mts'
 import formatResponse from './formatResponse.mts'
-import ERROR_MESSAGE from './getLinksRequests.mts'
 
 export const getLinksHandler = async (albumGetter) => {
   try {
@@ -9,6 +8,6 @@ export const getLinksHandler = async (albumGetter) => {
       return formatResponse(200, data);
   } catch(error) {
       console.error(error);
-      return formatResponse(500, { error: ERROR_MESSAGE });
+      return formatResponse(500, { error });
   }
 }
