@@ -1,1 +1,4 @@
 get http://localhost:8888/.netlify/functions/getAllLinks
+
+###
+get http://localhost:8888/.netlify/functions/getCeremonyLinks

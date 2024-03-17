@@ -1,13 +1,13 @@
-import sendQuery from './getContentByQuery.mts'
+import getContentByQuery from './getContentByQuery.mts'
 import formatResponse from './formatResponse.mts'
 
-export const getLinksHandler = async (albumGetter) => {
+export const getLinksHandler = (query) => async () => {
   try {
-      const res = await sendQuery(albumGetter);
-      const { data } = res.getAllAlbumLinks;
-      return formatResponse(200, data);
+    const data = await getContentByQuery(query)
+    console.log(data.length)
+    return formatResponse(200, data)
   } catch(error) {
-      console.error(error);
-      return formatResponse(500, { error });
+    console.error(error)
+    return formatResponse(500, { error })
   }
 }
