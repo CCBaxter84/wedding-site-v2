@@ -18,3 +18,6 @@ get http://localhost:8888/api/family
 
 ###
 get http://localhost:8888/api/reception
+
+###
+get http://localhost:8888/api/videos

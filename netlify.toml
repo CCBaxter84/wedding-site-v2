@@ -42,3 +42,8 @@
   from = "/api/reception"
   to = "/.netlify/functions/getReceptionLinks"
   status = 200
+
+[[redirects]]
+  from = "/api/videos"
+  to = "/.netlify/functions/getVideosLinks"
+  status = 200
