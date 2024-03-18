@@ -1,4 +1,4 @@
-export default (statusCode, body) => {
+export function formatResponse(statusCode, body) {
   return {
     statusCode,
     body: JSON.stringify(body),

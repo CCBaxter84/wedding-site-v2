@@ -2,7 +2,7 @@ import axios from 'axios'
 import dotenv from 'dotenv'
 dotenv.config()
 
-export default async (query) => {
+export async function getContentByQuery(query) {
   const { data: { data, errors} } = await axios({
     url: process.env.FAUNA_URL,
     method: 'POST',
