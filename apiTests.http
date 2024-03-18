@@ -9,3 +9,6 @@ get http://localhost:8888/api/couple
 
 ###
 get http://localhost:8888/api/engagement
+
+###
+get http://localhost:8888/api/getting-ready

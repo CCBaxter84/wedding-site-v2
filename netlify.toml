@@ -9,21 +9,26 @@
   node_bundler = "esbuild"
 
 [[redirects]]
-    from = "/api/ceremony"
-    to = "/.netlify/functions/getCeremonyLinks"
-    status = 200
+  from = "/api/ceremony"
+  to = "/.netlify/functions/getCeremonyLinks"
+  status = 200
 
 [[redirects]]
-    from = "/api/couple"
-    to = "/.netlify/functions/getCoupleLinks"
-    status = 200
+  from = "/api/couple"
+  to = "/.netlify/functions/getCoupleLinks"
+  status = 200
 
 [[redirects]]
-    from = "/api/puppies"
-    to = "/.netlify/functions/getPuppyLinks"
-    status = 200
+  from = "/api/puppies"
+  to = "/.netlify/functions/getPuppyLinks"
+  status = 200
 
 [[redirects]]
-    from = "/api/engagement"
-    to = "/.netlify/functions/getEngagementLinks"
-    status = 200
+  from = "/api/engagement"
+  to = "/.netlify/functions/getEngagementLinks"
+  status = 200
+
+[[redirects]]
+  from = "/api/getting-ready"
+  to = "/.netlify/functions/getGettingReadyLinks"
+  status = 200
