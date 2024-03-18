@@ -1,3 +1,6 @@
+import { PAGINATION } from './const'
+
 export function makeQuery(name) {
-  return `Link.where(.album == "${name}").paginate(1000)`
+  return `Link.where(.album == "${name}")` +
+    `.paginate(${PAGINATION})`
 }
