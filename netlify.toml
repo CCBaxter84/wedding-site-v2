@@ -37,3 +37,8 @@
   from = "/api/family"
   to = "/.netlify/functions/getFamilyLinks"
   status = 200
+
+[[redirects]]
+  from = "/api/reception"
+  to = "/.netlify/functions/getReceptionLinks"
+  status = 200
