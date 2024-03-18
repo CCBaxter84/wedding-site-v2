@@ -12,3 +12,6 @@ get http://localhost:8888/api/engagement
 
 ###
 get http://localhost:8888/api/getting-ready
+
+###
+get http://localhost:8888/api/family

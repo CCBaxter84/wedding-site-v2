@@ -32,3 +32,8 @@
   from = "/api/getting-ready"
   to = "/.netlify/functions/getGettingReadyLinks"
   status = 200
+
+[[redirects]]
+  from = "/api/family"
+  to = "/.netlify/functions/getFamilyLinks"
+  status = 200
