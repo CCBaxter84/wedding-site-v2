@@ -22,3 +22,8 @@
     from = "/api/puppies"
     to = "/.netlify/functions/getPuppyLinks"
     status = 200
+
+[[redirects]]
+    from = "/api/engagement"
+    to = "/.netlify/functions/getEngagementLinks"
+    status = 200
