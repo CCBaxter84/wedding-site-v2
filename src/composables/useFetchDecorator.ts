@@ -8,7 +8,6 @@ export async function useFetchDecorator(fun: Function) {
     await fun()
   } catch(e) {
     console.error(e)
-    return []
   } finally {
     isLoading.value = false
   }
