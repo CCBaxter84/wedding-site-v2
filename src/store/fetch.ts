@@ -13,7 +13,6 @@ export const useFetchStore = defineStore('fetch', {
         console.error(e)
         return []
       } finally {
-        console.log('done')
         this.isLoading = false
       }
     }
