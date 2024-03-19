@@ -5,18 +5,18 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import { useFetchStore } from '@/store/fetch'
+import { onMounted, Ref, ref } from 'vue'
+import { Link } from '@/types'
+import { useFetchDecorator } from '@/composables/useFetchDecorator'
 import { getHomeVideo } from '@/controllers'
 
-const store = useFetchStore()
-let homeVideo = ref(null)
+let homeVideo: Ref<Link|null> = ref(null)
 
 async function setHomeVideo() {
   homeVideo.value = await getHomeVideo()
 }
 
 onMounted(async () => {
-  await store.fetchPhotosData(setHomeVideo)
+  await useFetchDecorator(setHomeVideo)
 })
 </script>
