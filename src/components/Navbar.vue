@@ -1,6 +1,8 @@
 <template>
   <header class="flex justify-content-center">
-    Navbar goes here
+    <nav>
+      <router-link  to="/">Home</router-link>
+    </nav>
   </header>
 </template>
 
