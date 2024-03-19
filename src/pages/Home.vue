@@ -19,5 +19,4 @@ async function setHomeVideo() {
 onMounted(async () => {
   await store.fetchPhotosData(setHomeVideo)
 })
-
 </script>
