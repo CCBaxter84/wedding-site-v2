@@ -5,7 +5,9 @@
 <template>
   <div class="container has-text-primary">
     <header class="flex justify-content-center">Navbar goes here</header>
-    <main class="flex justify-content-center">Content goes here</main>
+    <main class="flex justify-content-center">
+      <router-view />
+    </main>
   </div>
 </template>
 
