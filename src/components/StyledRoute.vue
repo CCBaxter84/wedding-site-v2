@@ -9,8 +9,14 @@
 
 <script setup lang="ts">
 defineProps({
-  name: String,
-  to: String
+  name: {
+    type: String,
+    required: true
+  },
+  to: {
+    type: String,
+    required: true
+  }
 })
 </script>
 
