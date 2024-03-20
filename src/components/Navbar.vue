@@ -1,20 +1,15 @@
 <template>
   <header class="flex justify-content-center">
-    <nav>
-      <router-link  to="/">Home</router-link>
-    </nav>
+    <StyledRoute name="Home" />
   </header>
 </template>
 
 <script setup lang="ts">
-
+import StyledRoute from './StyledRoute.vue'
 </script>
 
 <style scoped>
 header {
   padding: 2rem;
-}
-a {
-  text-decoration: none;
 }
 </style>
