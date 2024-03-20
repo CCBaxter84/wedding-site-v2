@@ -24,4 +24,4 @@ async function setHomeVideo() {
 onMounted(async () => {
   await fetchDecorator(setHomeVideo)
 })
-</script>@/composables/useAxios@/composables/useFetch
+</script>
