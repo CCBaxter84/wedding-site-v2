@@ -25,14 +25,14 @@ const posts = computed(() => ([
     "After dating for a little over a month, we experienced a bit of a 'No-Win' scenario. You see, we had scheduled a date for this evening, and then Liz learned that her family wanted to hold Noni Peg's 89th birthday party the same night. Consequently, since neither of us wanted to break the date, Liz spent much of this day and the day prior making a birthday cake, and Chris got to meet Liz's whole family at once at the birthday party.",
     "https://wedding-photo-app54.s3.us-east-2.amazonaws.com/OurStory/Kirk.jpeg",
     "Captain Kirk from Star Trek"
-  )
+  ),
   new Post("Our First Trip",
     "We spent Memorial Day weekend 2019 taking a road trip through Utah. Along the +1,200 mi. journey, we visited Arches National Park, Zion National Park, and Monument Valley.",
     "https://wedding-photo-app54.s3.us-east-2.amazonaws.com/OurStory/Zion.JPG",
     "Forested Valley"
-  )
+  ),
   new Post("Our Engagement",
-    "Right before we headed out to dinner in celebration of Liz's birthday, Chris revealed he had one last birthday present and popped the question."
+    "Right before we headed out to dinner in celebration of Liz's birthday, Chris revealed he had one last birthday present and popped the question.",
     "https://wedding-photo-app54.s3.us-east-2.amazonaws.com/OurStory/Ring.JPG",
     "Hand wearing Engagement Ring"
   ),
