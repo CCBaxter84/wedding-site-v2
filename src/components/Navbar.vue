@@ -14,4 +14,7 @@
 header {
   padding: 2rem;
 }
+a {
+  text-decoration: none;
+}
 </style>
