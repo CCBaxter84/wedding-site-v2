@@ -1,6 +1,6 @@
 import { ref, Ref } from 'vue'
 
-export function useFetchDecorator() {
+export function useFetch() {
   const isLoading = ref(false)
   const error: Ref<any|null> = ref(null)
   
