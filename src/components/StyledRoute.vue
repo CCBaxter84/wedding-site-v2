@@ -1,6 +1,6 @@
 <template>
   <nav class="flex align-items-center">
-    <router-link  to="/"
+    <router-link  :to="to"
                   class="flex justify-content-center align-items-center">
         {{ name }}
     </router-link>
@@ -9,7 +9,8 @@
 
 <script setup lang="ts">
 defineProps({
-  name: String
+  name: String,
+  to: String
 })
 </script>
 
