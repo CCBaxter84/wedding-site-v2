@@ -14,7 +14,7 @@ import { getHomeVideo } from '@/controllers'
 import Error from '@/components/Error.vue'
 import Loading from '@/components/Loading.vue'
 
-let homeVideo: Ref<Link|null> = ref(null)
+const homeVideo: Ref<Link|null> = ref(null)
 const { isLoading, fetchDecorator, error } = useFetchDecorator()
 
 async function setHomeVideo() {
