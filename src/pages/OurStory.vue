@@ -6,7 +6,12 @@
 import { computed } from 'vue'
 
 class Post {
-  constructor(title, text, url, desc) {
+  title: string
+  text: string
+  url: string
+  desc: string
+  
+  constructor(title: string, text: string, url: string, desc: string) {
     this.title = title,
     this.text = text,
     this.url = url,
