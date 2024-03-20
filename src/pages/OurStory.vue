@@ -4,7 +4,6 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import { Link } from '@/types'
 
 class Post {
   constructor(title, text, url, desc) {
