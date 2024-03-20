@@ -16,8 +16,7 @@ defineProps({
 <style scoped>
 a {
   border-radius: 0.75rem;
-  min-height: 2.5rem;
-  min-width: 4rem;
+  padding: 1rem;
   text-align: center;
   text-decoration: none;
 }

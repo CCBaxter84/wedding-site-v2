@@ -1,6 +1,9 @@
 <template>
   <header class="flex justify-content-center">
     <StyledRoute name="Home" />
+    <StyledRoute name="Our Story" />
+    <StyledRoute name="Engagement Photos" />
+    <StyledRoute name="Wedding Videos" />
   </header>
 </template>
 
