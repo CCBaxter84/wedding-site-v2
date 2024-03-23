@@ -1,7 +1,7 @@
 <template>
   <section  v-if="!isLoading"
             class="flex-column align-items-center"
-            style="margin-bottom: 3rem;">
+            style="margin-bottom: 3rem; width: 100%;">
     <slot />
   </section>
   <Error  v-else-if="!!error"/>
