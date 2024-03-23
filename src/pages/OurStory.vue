@@ -39,9 +39,4 @@ const posts = computed(() => ([
     "https://wedding-photo-app54.s3.us-east-2.amazonaws.com/OurStory/Revan.JPG",
      "Black shit-tzu mix puppy")
 ]))
-
 </script>
-
-<style scoped>
-
-</style>
