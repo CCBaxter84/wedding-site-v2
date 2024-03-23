@@ -15,7 +15,6 @@ import Navbar from '@/components/Navbar.vue'
 .container {
   background-color: hsla(0, 0%, 100%, .5);
   border-radius: 0.75rem;
-  height: 100vh;
   margin: 2rem auto;
   width: 70%;
 }
