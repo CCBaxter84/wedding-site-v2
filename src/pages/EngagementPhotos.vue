@@ -2,8 +2,8 @@
   <AlbumContainer :isLoading="isLoading"
                   :error="error">
     <h1>Engagement Photos</h1>
-    <EmbeddedVideo  v-if="!!homeVideo"
-                    :video="homeVideo"/>
+    <Album  v-if="!!engagementPhotos"
+            :photos="engagementPhotos"/>
   </AlbumContainer>
 </template>
 
@@ -11,18 +11,18 @@
 import { onMounted, Ref, ref } from 'vue'
 import { Link } from '@/types'
 import { useFetch } from '@/composables/useFetch'
-import { getHomeVideo } from '@/controllers'
+import { getEngagementPhotos } from '@/controllers'
 import AlbumContainer from '@/components/AlbumContainer.vue'
-import EmbeddedVideo from '@/components/EmbeddedVideo.vue'
+import Album from '@/components/Album.vue'
 
-const homeVideo: Ref<Link|null> = ref(null)
+const engagementPhotos: Ref<Link[]|null> = ref(null)
 const { isLoading, fetchDecorator, error } = useFetch()
 
-async function setHomeVideo() {
-  homeVideo.value = await getHomeVideo()
+async function setEngagementPhotos() {
+  engagementPhotos.value = await getEngagementPhotos()
 }
 
 onMounted(async () => {
-  await fetchDecorator(setHomeVideo)
+  await fetchDecorator(setEngagementPhotos)
 })
 </script>
