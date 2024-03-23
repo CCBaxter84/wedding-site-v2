@@ -6,7 +6,8 @@ import EngagementPhotos from '@/pages/EngagementPhotos.vue'
 const routes = [
   { path: '/', component: Home },
   { path: '/our-story', component: OurStory },
-  { path: '/engagement-photos', component: EngagementPhotos }
+  { path: '/engagement-photos', component: EngagementPhotos },
+  { path: '/getting-ready', component: EngagementPhotos }
 ]
 
 export default createRouter({

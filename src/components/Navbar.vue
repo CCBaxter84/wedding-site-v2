@@ -6,6 +6,8 @@
                   to="/our-story"/>
     <StyledRoute  name="Engagement Photos"
                   to="/engagement-photos"/>
+    <StyledDropdown :options="options"
+                    title="Wedding Photos"/>
     <StyledRoute  name="Wedding Videos"
                   to="/"/>
   </header>
@@ -13,6 +15,14 @@
 
 <script setup lang="ts">
 import StyledRoute from './StyledRoute.vue'
+import StyledDropdown from './StyledDropdown.vue'
+
+const options = [
+  {
+    to: 'getting-ready',
+    name: 'Getting Ready'
+  }
+]
 </script>
 
 <style scoped>
