@@ -28,9 +28,9 @@ a {
   text-decoration: none;
 }
 a:focus {
-  background-color: #fafafa;
+  background-color: var(--focus-background);
 }
 a:hover {
-  background-color: hsla(0, 0%, 100%, .3);
+  background-color: var(--nav-hover-background);
 }
 </style>
