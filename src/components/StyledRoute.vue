@@ -1,7 +1,7 @@
 <template>
   <nav class="flex align-items-center">
     <router-link  :to="to"
-                  class="flex justify-content-center align-items-center">
+                  class="flex justify-content-center align-items-center has-text-primary">
         {{ name }}
     </router-link>
   </nav>
