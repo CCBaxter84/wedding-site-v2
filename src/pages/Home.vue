@@ -1,12 +1,10 @@
 <template>
-  <section  v-if="!isLoading && !!homeVideo"
-            class="flex-column align-items-center"
-            style="margin-bottom: 3rem;">
+  <AlbumContainer :isLoading="isLoading"
+                  :error="error">
     <h1>The Clarks' Wedding</h1>
-    <EmbeddedVideo :video="homeVideo"/>
-  </section>
-  <Error  v-else-if="!!error"/>
-  <Loading v-else/>
+    <EmbeddedVideo  v-if="!!homeVideo"
+                    :video="homeVideo"/>
+  </AlbumContainer>
 </template>
 
 <script setup lang="ts">
@@ -14,8 +12,7 @@ import { onMounted, Ref, ref } from 'vue'
 import { Link } from '@/types'
 import { useFetch } from '@/composables/useFetch'
 import { getHomeVideo } from '@/controllers'
-import Error from '@/components/Error.vue'
-import Loading from '@/components/Loading.vue'
+import AlbumContainer from '@/components/AlbumContainer.vue'
 import EmbeddedVideo from '@/components/EmbeddedVideo.vue'
 
 const homeVideo: Ref<Link|null> = ref(null)
