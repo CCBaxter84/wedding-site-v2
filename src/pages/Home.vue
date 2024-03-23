@@ -1,6 +1,7 @@
 <template>
   <section  v-if="!isLoading && !!homeVideo"
-            class="flex-column align-items-center">
+            class="flex-column align-items-center"
+            style="margin-bottom: 3rem;">
     <h1>The Clarks' Wedding</h1>
     <EmbeddedVideo :video="homeVideo"/>
   </section>
