@@ -5,7 +5,7 @@
     <StyledRoute  name="Our Story"
                   to="our-story"/>
     <StyledRoute  name="Engagement Photos"
-                  to="/"/>
+                  to="engagement-photos"/>
     <StyledRoute  name="Wedding Videos"
                   to="/"/>
   </header>
