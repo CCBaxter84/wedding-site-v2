@@ -3,9 +3,9 @@
     <StyledRoute  name="Home" 
                   to="/"/>
     <StyledRoute  name="Our Story"
-                  to="our-story"/>
+                  to="/our-story"/>
     <StyledRoute  name="Engagement Photos"
-                  to="engagement-photos"/>
+                  to="/engagement-photos"/>
     <StyledRoute  name="Wedding Videos"
                   to="/"/>
   </header>
@@ -17,6 +17,6 @@ import StyledRoute from './StyledRoute.vue'
 
 <style scoped>
 header {
-  padding: 2rem;
+  padding: 2rem 2rem 0 2rem;
 }
 </style>
