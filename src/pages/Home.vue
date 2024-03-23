@@ -1,9 +1,11 @@
 <template>
-  <Loading v-if="isLoading"/>
-  <Error  v-else-if="error"/>
-  <section  v-else>
-    <h1>Home</h1>
+  <section  v-if="!isLoading && !!homeVideo"
+            class="flex-column align-items-center">
+    <h1>The Clarks' Wedding</h1>
+    <EmbeddedVideo :video="homeVideo"/>
   </section>
+  <Error  v-else-if="!!error"/>
+  <Loading v-else/>
 </template>
 
 <script setup lang="ts">
@@ -13,6 +15,7 @@ import { useFetch } from '@/composables/useFetch'
 import { getHomeVideo } from '@/controllers'
 import Error from '@/components/Error.vue'
 import Loading from '@/components/Loading.vue'
+import EmbeddedVideo from '@/components/EmbeddedVideo.vue'
 
 const homeVideo: Ref<Link|null> = ref(null)
 const { isLoading, fetchDecorator, error } = useFetch()

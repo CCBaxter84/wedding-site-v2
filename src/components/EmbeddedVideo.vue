@@ -1,18 +1,22 @@
 <template>
-  <section class="flex-column is-full-width" >
-    <video  :src="item.url" 
+  <section class="flex justify-content-center is-full-width" >
+    <video  :src="video.url" 
             class="video"
             type="video/mp4"
             ref="video"
             autoplay
-            controls/>
+            controls
+            muted/>
   </section>
 </template>
 
 <script setup lang="ts">
+import { type PropType } from 'vue';
+import { Link } from '@/types'
+
 defineProps({
-  item: {
-    type: Object,
+  video: {
+    type: Object as PropType<Link>,
     required: true
   }
 })
