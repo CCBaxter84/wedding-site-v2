@@ -1,5 +1,5 @@
 <template>
-  <section style="padding: 0 5rem;">
+  <section style="width: 100%;">
     <VirtualList  :dataSources="posts"
                   :dataComponent="Post"
                   dataKey="url"/>
