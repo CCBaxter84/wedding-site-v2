@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar.vue'
 <template>
   <div class="container has-text-primary">
     <Navbar />
-    <main class="flex-column justify-content-center align-items-center">
+    <main class="flex-column flex-wrap-wrap justify-content-center align-items-center">
       <router-view />
     </main>
   </div>
