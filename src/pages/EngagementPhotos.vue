@@ -1,7 +1,7 @@
 <template>
   <AlbumContainer :isLoading="isLoading"
                   :error="error">
-    <h1>The Clarks' Wedding</h1>
+    <h1>Engagement Photos</h1>
     <EmbeddedVideo  v-if="!!homeVideo"
                     :video="homeVideo"/>
   </AlbumContainer>
