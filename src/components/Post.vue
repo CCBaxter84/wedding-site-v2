@@ -1,12 +1,13 @@
 <template>
-  <article  class="flex-column align-items-center"
-            style="margin-bottom: 5rem; padding: 0 3rem;">
+  <PhotoAlbum>
     <h2>{{ source.title }}</h2>
     <img :src="source.url" :alt="source.description">
     <p  style="padding: 0 2rem;">{{ source.text }}</p>
-  </article>
+  </PhotoAlbum>
 </template>
 
 <script setup lang="ts">
+import PhotoAlbum from './PhotoAlbum.vue'
+
 defineProps(['source'])
 </script>
