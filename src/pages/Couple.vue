@@ -1,7 +1,7 @@
 <template>
   <AlbumContainer :isLoading="isLoading"
                   :error="error">
-    <h1>Getting Ready Photos</h1>
+    <h1>Couple Photos</h1>
     <Album  v-if="!!couplePhotos"
             :photos="couplePhotos"/>
   </AlbumContainer>

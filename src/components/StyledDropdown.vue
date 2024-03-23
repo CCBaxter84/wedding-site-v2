@@ -7,7 +7,7 @@
       <span>{{ title }}</span>
     </nav>
     <article  v-show="isOpen"
-              class="dropdown-items flex justify-content-center">
+              class="dropdown-items flex-column align-items-center">
       <StyledRoute  v-for="opt in options"
                     :name="opt.name"
                     :to="opt.to"
@@ -53,5 +53,6 @@ function hideDropdown() {
   background-color: var(--purple-gradient);
   border-radius: 0.75rem;
   cursor: pointer;
+  width: 100%;
 }
 </style>

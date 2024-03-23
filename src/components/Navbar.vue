@@ -21,6 +21,10 @@ const options = [
   {
     to: 'getting-ready',
     name: 'Getting Ready'
+  },
+  {
+    to: 'couple',
+    name: 'Couple'
   }
 ]
 </script>
