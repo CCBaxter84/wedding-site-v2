@@ -1,7 +1,12 @@
 <template>
   <VirtualList  :dataSources="photos"
                 :dataComponent="Photo"
-                dataKey="url"/>
+                dataKey="url"
+                style="max-height: 75vh; 
+                  width: 100%;
+                  overflow-y: auto; 
+                  scrollbar-color: var(--primary) transparent;
+                  scrollbar-width: thin"/>
 </template>
 
 <script setup lang="ts">
