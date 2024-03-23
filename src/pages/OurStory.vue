@@ -7,13 +7,12 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 //@ts-ignore
 import VirtualList from "vue3-virtual-scroll-list"
 import Post from '@/components/Post.vue'
 import { StoryPost } from '@/types/classes'
 
-const posts = computed(() => ([
+const posts = [
   new StoryPost("Our First Date", 
     "We met for tea and hot cocoa at Mutiny Information Cafe -- a Denver coffeeshop featuring used books, comics, and records. We got on so well that we were late for dinner reservations Chris had made for a more romantic restaurant down the street.",
     "https://wedding-photo-app54.s3.us-east-2.amazonaws.com/OurStory/FirstDate.jpeg",
@@ -38,5 +37,5 @@ const posts = computed(() => ([
     "Our Nova puppy was getting lonely. So, we got her a new little brother -- Revan.",
     "https://wedding-photo-app54.s3.us-east-2.amazonaws.com/OurStory/Revan.JPG",
      "Black shit-tzu mix puppy")
-]))
+]
 </script>
