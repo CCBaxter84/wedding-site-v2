@@ -5,7 +5,7 @@
     <StyledRoute  name="Our Story"
                   to="/our-story"/>
     <StyledRoute  name="Engagement Photos"
-                  to="/engagement-photos"/>
+                  to="/engagement"/>
     <StyledDropdown :options="options"
                     title="Wedding Photos"/>
     <StyledRoute  name="Wedding Videos"
