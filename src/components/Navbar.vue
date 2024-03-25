@@ -21,7 +21,8 @@ import StyledDropdown from './StyledDropdown.vue'
 
 const options = [
   new RouteLink(ApiPaths.gettingReady, Titles.gettingReady),
-  new RouteLink(ApiPaths.couple, Titles.couple)
+  new RouteLink(ApiPaths.couple, Titles.couple),
+  new RouteLink(ApiPaths.ceremony, Titles.ceremony)
 ]
 </script>
 

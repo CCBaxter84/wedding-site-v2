@@ -36,6 +36,7 @@ function hideDropdown() {
   position: relative;
   padding-left: 1rem;
   padding-right: 1rem;
+  z-index: 2;
 }
 .dropdown:hover {
   background-color: var(--nav-hover-background);
