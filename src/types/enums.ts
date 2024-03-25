@@ -9,5 +9,6 @@ export enum Albums {
 }
 
 export enum ApiPaths {
-  engagement = "/engagement"
+  engagement = "/engagement",
+  gettingReady = "/getting-ready"
 }
