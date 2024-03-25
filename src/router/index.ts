@@ -9,8 +9,9 @@ const routes = [
   { path: '/our-story', component: OurStory },
   { path: ApiPaths.engagement, component: PhotoAlbum, meta: { title: Titles.engagement }},
   { path: ApiPaths.gettingReady, component: PhotoAlbum, meta: { title: Titles.gettingReady }},
+  { path: ApiPaths.ceremony, component: PhotoAlbum, meta: { title: Titles.ceremony }},
   { path: ApiPaths.couple, component: PhotoAlbum, meta: { title: Titles.couple }},
-  { path: ApiPaths.ceremony, component: PhotoAlbum, meta: { title: Titles.ceremony }}
+  { path: ApiPaths.family, component: PhotoAlbum, meta: { title: Titles.family }}
 ]
 
 export default createRouter({
