@@ -15,6 +15,7 @@ export enum ApiPaths {
   family = "/family",
   gettingReady = "/getting-ready",
   ourStory = "/our-story",
+  puppies = "/puppies",
   reception = "/reception",
   videos = "/videos"  
 }
@@ -28,6 +29,7 @@ export enum Titles {
   home = "Home",
   ourStory = "Our Story",
   photos = "Wedding Photos",
+  puppies = "Puppies",
   reception = "Reception",
   videos = "Wedding Videos" 
 }
