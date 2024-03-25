@@ -7,3 +7,7 @@ export enum Albums {
   reception = "Reception",
   videos = "Videos"  
 }
+
+export enum ApiPaths {
+  engagement = "/engagement"
+}
