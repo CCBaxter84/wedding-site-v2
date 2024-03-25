@@ -7,7 +7,7 @@ import Couple from '@/pages/Couple.vue'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/our-story', component: OurStory },
+  { path: '/our-story', component: OurStory, meta: { title: 'Our Story' } },
   { path: '/engagement', component: Engagement },
   { path: '/getting-ready', component: GettingReady },
   { path: '/couple', component: Couple }
