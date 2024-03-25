@@ -1,7 +1,6 @@
 export * from './getHomeVideo'
 export * from './getPuppyPhotos'
 export * from './getCeremonyPhotos'
-export * from './getCouplePhotos'
 export * from './getReceptionPhotos'
 export * from './getFamilyPhotos'
 export * from './getPhotoAlbum'
