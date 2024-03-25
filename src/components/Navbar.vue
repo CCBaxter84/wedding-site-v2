@@ -1,30 +1,31 @@
 <template>
   <header class="flex justify-content-center">
-    <StyledRoute  name="Home" 
+    <StyledRoute  :name="Titles.home" 
                   to="/"/>
-    <StyledRoute  name="Our Story"
+    <StyledRoute  :name="Titles.ourStory"
                   to="/our-story"/>
-    <StyledRoute  name="Engagement Photos"
-                  to="/engagement"/>
+    <StyledRoute  :name="Titles.engagement"
+                  :to="ApiPaths.engagement"/>
     <StyledDropdown :options="options"
-                    title="Wedding Photos"/>
-    <StyledRoute  name="Wedding Videos"
+                    :title="Titles.photos"/>
+    <StyledRoute  :name="Titles.videos"
                   to="/"/>
   </header>
 </template>
 
 <script setup lang="ts">
+import { Titles, ApiPaths } from '@/types/enums';
 import StyledRoute from './StyledRoute.vue'
 import StyledDropdown from './StyledDropdown.vue'
 
 const options = [
   {
-    to: 'getting-ready',
-    name: 'Getting Ready'
+    to: ApiPaths.gettingReady,
+    name: Titles.gettingReady
   },
   {
-    to: 'couple',
-    name: 'Couple'
+    to: ApiPaths.couple,
+    name: Titles.couple
   }
 ]
 </script>
