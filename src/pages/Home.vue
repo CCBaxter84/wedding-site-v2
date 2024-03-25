@@ -3,7 +3,8 @@
                   :error="error">
     <h1>The Clarks' Wedding</h1>
     <EmbeddedVideo  v-if="!!homeVideo"
-                    :video="homeVideo"/>
+                    :video="homeVideo"
+                    :autoPlay="true"/>
   </AlbumContainer>
 </template>
 

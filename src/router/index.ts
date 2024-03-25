@@ -3,6 +3,7 @@ import { ApiPaths, Titles } from '@/types/enums'
 import Home from '@/pages/Home.vue'
 import OurStory from '@/pages/OurStory.vue'
 import PhotoAlbum from '@/pages/PhotoAlbum.vue'
+import WeddingVideos from '@/pages/WeddingVideos.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -13,7 +14,8 @@ const routes = [
   { path: ApiPaths.couple, component: PhotoAlbum, meta: { title: Titles.couple }},
   { path: ApiPaths.family, component: PhotoAlbum, meta: { title: Titles.family }},
   { path: ApiPaths.reception, component: PhotoAlbum, meta: { title: Titles.reception }},
-  { path: ApiPaths.puppies, component: PhotoAlbum, meta: { title: Titles.puppies }}
+  { path: ApiPaths.puppies, component: PhotoAlbum, meta: { title: Titles.puppies }},
+  { path: ApiPaths.videos, component: WeddingVideos, meta: { title: Titles.videos }}
 ]
 
 export default createRouter({

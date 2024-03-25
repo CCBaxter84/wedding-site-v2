@@ -7,5 +7,5 @@ export type Link = {
   url: string,
   description: string,
   album: Albums,
-  thumbnail: string
+  thumbnail?: string
 }

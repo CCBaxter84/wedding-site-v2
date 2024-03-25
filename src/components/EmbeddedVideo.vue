@@ -1,10 +1,10 @@
 <template>
   <section class="flex justify-content-center is-full-width" >
     <video  :src="video.url" 
+            :autoplay="autoPlay"
             class="video"
             type="video/mp4"
             ref="video"
-            autoplay
             controls
             muted/>
   </section>
@@ -18,7 +18,8 @@ defineProps({
   video: {
     type: Object as PropType<Link>,
     required: true
-  }
+  },
+  autoPlay: Boolean
 })
 </script>
 

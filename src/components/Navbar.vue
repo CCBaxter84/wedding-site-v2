@@ -9,7 +9,7 @@
     <StyledDropdown :options="options"
                     :title="Titles.photos"/>
     <StyledRoute  :name="Titles.videos"
-                  to="/"/>
+                  :to="ApiPaths.videos"/>
   </header>
 </template>
 
