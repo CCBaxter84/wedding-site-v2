@@ -23,7 +23,8 @@ const options = [
   new RouteLink(ApiPaths.gettingReady, Titles.gettingReady),
   new RouteLink(ApiPaths.ceremony, Titles.ceremony),
   new RouteLink(ApiPaths.couple, Titles.couple),
-  new RouteLink(ApiPaths.family, Titles.family)
+  new RouteLink(ApiPaths.family, Titles.family),
+  new RouteLink(ApiPaths.reception, Titles.reception)
 ]
 </script>
 

@@ -11,7 +11,8 @@ const routes = [
   { path: ApiPaths.gettingReady, component: PhotoAlbum, meta: { title: Titles.gettingReady }},
   { path: ApiPaths.ceremony, component: PhotoAlbum, meta: { title: Titles.ceremony }},
   { path: ApiPaths.couple, component: PhotoAlbum, meta: { title: Titles.couple }},
-  { path: ApiPaths.family, component: PhotoAlbum, meta: { title: Titles.family }}
+  { path: ApiPaths.family, component: PhotoAlbum, meta: { title: Titles.family }},
+  { path: ApiPaths.reception, component: PhotoAlbum, meta: { title: Titles.reception }}
 ]
 
 export default createRouter({
