@@ -14,19 +14,14 @@
 </template>
 
 <script setup lang="ts">
-import { Titles, ApiPaths } from '@/types/enums';
+import { Titles, ApiPaths } from '@/types/enums'
+import { RouteLink } from '@/types/classes';
 import StyledRoute from './StyledRoute.vue'
 import StyledDropdown from './StyledDropdown.vue'
 
 const options = [
-  {
-    to: ApiPaths.gettingReady,
-    name: Titles.gettingReady
-  },
-  {
-    to: ApiPaths.couple,
-    name: Titles.couple
-  }
+  new RouteLink(ApiPaths.gettingReady, Titles.gettingReady),
+  new RouteLink(ApiPaths.couple, Titles.couple)
 ]
 </script>
 
