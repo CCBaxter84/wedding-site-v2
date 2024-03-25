@@ -17,7 +17,6 @@ import { getPhotoAlbum } from '@/controllers'
 import AlbumContainer from '@/components/AlbumContainer.vue'
 import Album from '@/components/Album.vue'
 
-
 const photos: Ref<Link[]|null> = ref(null)
 const { isLoading, fetchDecorator, error } = useFetch()
 const route = useRoute()

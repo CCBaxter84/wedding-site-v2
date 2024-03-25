@@ -9,7 +9,11 @@ export enum Albums {
 }
 
 export enum ApiPaths {
+  ceremony = "/ceremony",
+  couple = "/couple",
   engagement = "/engagement",
+  family = "/family",
   gettingReady = "/getting-ready",
-  couple = "/couple"
+  reception = "/reception",
+  videos = "/videos"  
 }
