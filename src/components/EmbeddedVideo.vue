@@ -28,13 +28,8 @@ defineProps({
   max-height: 100%;
   position: relative;
   width: 75%;
-  height: 30rem;
 }
-@media screen and (max-width: 1020px){
-  .video {
-      width: 100%;
-  }
-}
+
 @media screen and (max-width: 415px){
   .video {
       height: 10rem;
