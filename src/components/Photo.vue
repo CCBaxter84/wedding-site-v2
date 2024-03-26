@@ -25,3 +25,9 @@ defineProps({
 
 const { redirectToPhoto } = useLastPhotoCache()
 </script>
+
+<style scoped>
+img:hover {
+  cursor: pointer;
+}
+</style>
