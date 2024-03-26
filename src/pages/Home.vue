@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import { onMounted, Ref, ref } from 'vue'
 import { Link } from '@/types'
-import { useFetch } from '@/composables/useFetch'
+import { useFetch } from '@/composables'
 import { getHomeVideo } from '@/controllers'
 import AlbumContainer from '@/components/AlbumContainer.vue'
 import EmbeddedVideo from '@/components/EmbeddedVideo.vue'

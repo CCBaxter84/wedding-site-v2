@@ -1,5 +1,5 @@
 <template>
-  <VirtualList  :dataSources="props.photos"
+  <VirtualList  :dataSources="photos"
                 :dataComponent="Photo"
                 dataKey="url"
                 ref="virtualList"
