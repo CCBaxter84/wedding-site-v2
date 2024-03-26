@@ -8,17 +8,19 @@
     </nav>
     <article  v-show="isOpen"
               class="dropdown-items flex-column align-items-center">
-      <StyledRoute  v-for="opt in options"
-                    :name="opt.name"
-                    :to="opt.to"
-                    class="dropdown-item"/>
+      <nav  v-for="opt in options"
+            class="flex align-items-center dropdown-item">
+        <router-link  :to="opt.to"
+                      class="flex justify-content-center align-items-center has-text-primary">
+            {{ opt.name }}
+        </router-link>
+      </nav>
     </article>
   </section>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import StyledRoute from './StyledRoute.vue'
 
 defineProps(['title', 'options'])
 const isOpen = ref(false)
@@ -53,7 +55,19 @@ function hideDropdown() {
 .dropdown-item:hover {
   background-color: var(--purple-gradient);
   border-radius: 0.75rem;
+  color: var(--focus-background) !important;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
   width: 100%;
+}
+.dropdown-item:hover > a {
+  color: var(--focus-background);
+}
+a {
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
 }
 </style>
