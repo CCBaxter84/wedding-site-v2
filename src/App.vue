@@ -18,4 +18,10 @@ import Navbar from '@/components/Navbar.vue'
   margin: 2rem auto;
   width: 70%;
 }
+@media screen and (max-width: 1025px) {
+  .container {
+    margin: 1rem auto;
+    width: 90%;
+  }
+}
 </style>
