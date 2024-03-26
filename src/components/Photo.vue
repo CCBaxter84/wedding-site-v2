@@ -1,6 +1,7 @@
 <template>
   <PhotoContainer>
-    <img :src="source.url" :alt="source.description">
+    <img  :src="source.url" 
+          :alt="source.description">
   </PhotoContainer>
 </template>
 
