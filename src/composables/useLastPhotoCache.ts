@@ -1,19 +1,21 @@
-import { Link } from '@/types'
+import { Link, PhotoLocation } from '@/types'
 
 export function useLastPhotoCache() {
   const LAST_PHOTO = 'last-photo'
 
   function redirectToPhoto(item: Link, index: number) {
-    cacheLastPhotoIndex(index)
+    cacheLastPhoto({ album: item.album, index })
     window.location.href = item.url
   }
 
-  function getLastPhotoIndex() {
-    return localStorage.getItem(LAST_PHOTO)
+  function getLastPhoto(): PhotoLocation|null {
+    const localStorageLookup = localStorage.getItem(LAST_PHOTO)
+    return (!!localStorageLookup) ? JSON.parse(localStorageLookup)
+      : null
   }
 
-  function cacheLastPhotoIndex(index: number) {
-    localStorage.setItem(LAST_PHOTO, String(index))
+  function cacheLastPhoto(dto: PhotoLocation) {
+    localStorage.setItem(LAST_PHOTO, JSON.stringify(dto))
   }
 
   function clearLastPhotoCache() {
@@ -22,7 +24,7 @@ export function useLastPhotoCache() {
 
   return { 
     redirectToPhoto, 
-    getLastPhotoIndex, 
-    clearLastPhotoCache 
+    getLastPhoto, 
+    clearLastPhotoCache
   }
 }
