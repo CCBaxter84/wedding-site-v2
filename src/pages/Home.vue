@@ -9,21 +9,30 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, Ref, ref } from 'vue'
+import { onBeforeMount, onMounted, Ref, ref } from 'vue'
 import { Link } from '@/types'
-import { useFetch } from '@/composables'
+import { useFetch, useLastPhotoCache } from '@/composables'
 import { getHomeVideo } from '@/controllers'
 import AlbumContainer from '@/components/AlbumContainer.vue'
 import EmbeddedVideo from '@/components/EmbeddedVideo.vue'
 
 const homeVideo: Ref<Link|null> = ref(null)
 const { isLoading, fetchDecorator, error } = useFetch()
+const { lastPhoto, setLastPhoto, navToPhotoInAlbum } = useLastPhotoCache()
 
 async function setHomeVideo() {
   homeVideo.value = await getHomeVideo()
 }
 
+onBeforeMount(() => {
+  setLastPhoto()
+  if (!!lastPhoto.value) {
+    navToPhotoInAlbum(lastPhoto.value)
+  }
+})
+
 onMounted(async () => {
+  console.log('mounted')
   await fetchDecorator(setHomeVideo)
 })
 </script>
