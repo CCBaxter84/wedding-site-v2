@@ -1,6 +1,6 @@
-import { Albums } from "./enums"
+import { Titles } from "./enums"
 
 export type PhotoLocation = {
-  album: Albums,
+  routeName: Titles,
   index: number
 }

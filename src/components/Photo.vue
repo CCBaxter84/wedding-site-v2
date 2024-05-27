@@ -1,7 +1,7 @@
 <template>
   <PhotoContainer>
     <img  :src="source.url" 
-          @click="redirectToPhoto(source, index)">
+          @click="redirectToPhoto(source.url, index)">
   </PhotoContainer>
 </template>
 

@@ -1,14 +1,17 @@
 import { ref, Ref, readonly } from 'vue'
-import { Link, PhotoLocation } from '@/types'
+import { useRoute } from 'vue-router'
+import { PhotoLocation } from '@/types'
+import { Titles } from '@/types/enums'
 
 export function useLastPhotoCache() {
-  const LAST_PHOTO = 'last-photo'
+  const route = useRoute()
 
+  const LAST_PHOTO = 'last-photo'
   const lastPhoto: Ref<PhotoLocation|null> = ref(null)
 
-  function redirectToPhoto(item: Link, index: number) {
-    cacheLastPhoto({ album: item.album, index })
-    window.location.href = item.url
+  function redirectToPhoto(srcUrl: string, index: number) {
+    cacheLastPhoto({ routeName: route.name as Titles, index })
+    window.location.href = srcUrl
   }
 
   function setLastPhoto() {
@@ -26,10 +29,15 @@ export function useLastPhotoCache() {
     localStorage.removeItem(LAST_PHOTO)
   }
 
+  function navToPhotoInAlbum(dto: PhotoLocation) {
+    console.log('route', dto.routeName)
+  }
+
   return { 
     lastPhoto: readonly(lastPhoto),
     redirectToPhoto, 
     setLastPhoto, 
-    clearLastPhotoCache
+    clearLastPhotoCache,
+    navToPhotoInAlbum
   }
 }
