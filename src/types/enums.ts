@@ -5,7 +5,8 @@ export enum Albums {
   family = "Family",
   gettingReady = "GettingReady",
   reception = "Reception",
-  videos = "Videos"  
+  videos = "Videos",
+  puppies = "Puppies"  
 }
 
 export enum ApiPaths {
