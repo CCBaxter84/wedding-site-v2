@@ -1,16 +1,20 @@
+import { ref, Ref, readonly } from 'vue'
 import { Link, PhotoLocation } from '@/types'
 
 export function useLastPhotoCache() {
   const LAST_PHOTO = 'last-photo'
+
+  const lastPhoto: Ref<PhotoLocation|null> = ref(null)
 
   function redirectToPhoto(item: Link, index: number) {
     cacheLastPhoto({ album: item.album, index })
     window.location.href = item.url
   }
 
-  function getLastPhoto(): PhotoLocation|null {
+  function setLastPhoto() {
     const localStorageLookup = localStorage.getItem(LAST_PHOTO)
-    return (!!localStorageLookup) ? JSON.parse(localStorageLookup)
+    lastPhoto.value = (!!localStorageLookup) 
+      ? JSON.parse(localStorageLookup)
       : null
   }
 
@@ -23,8 +27,9 @@ export function useLastPhotoCache() {
   }
 
   return { 
+    lastPhoto: readonly(lastPhoto),
     redirectToPhoto, 
-    getLastPhoto, 
+    setLastPhoto, 
     clearLastPhotoCache
   }
 }
