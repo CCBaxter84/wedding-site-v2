@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeMount, onMounted, Ref, ref } from 'vue'
+import { onMounted, Ref, ref } from 'vue'
 import { Link } from '@/types'
 import { useFetch, useLastPhotoCache } from '@/composables'
 import { getHomeVideo } from '@/controllers'
@@ -24,15 +24,12 @@ async function setHomeVideo() {
   homeVideo.value = await getHomeVideo()
 }
 
-onBeforeMount(() => {
+onMounted(async () => {
   setLastPhoto()
   if (!!lastPhoto.value) {
-    navToPhotoInAlbum(lastPhoto.value)
+    await navToPhotoInAlbum(lastPhoto.value)
+  } else {
+    await fetchDecorator(setHomeVideo)
   }
-})
-
-onMounted(async () => {
-  console.log('mounted')
-  await fetchDecorator(setHomeVideo)
 })
 </script>
