@@ -11,10 +11,10 @@
 </template>
 
 <script setup lang="ts">
-import { defineAsyncComponent, ref, onMounted, watch, toRefs } from 'vue'
+import { defineAsyncComponent, ref, onMounted, 
+  watch, toRefs, type PropType } from 'vue'
 //@ts-ignore
 import VirtualList from 'vue3-virtual-scroll-list'
-import { type PropType } from 'vue'
 import { Link } from '@/types'
 const Photo = defineAsyncComponent(() => {
   return import('@/components/Photo.vue')
